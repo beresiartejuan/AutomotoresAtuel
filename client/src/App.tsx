@@ -1,13 +1,8 @@
 import { Switch, Route } from "wouter";
-import "./App.css";
 import Index from "./pages/Index";
+import type { RouteProps } from "wouter";
 
-interface RouteInfo {
-    path: string,
-    component: () => JSX.Element
-};
-
-const routes: RouteInfo[] = [
+const routes: RouteProps[] = [
     {
         path: "/",
         component: Index
