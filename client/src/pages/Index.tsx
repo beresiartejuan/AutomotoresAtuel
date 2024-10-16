@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import Navbar from "../components/Navbar";
+import Navbar from "../islands/Navbar";
 import ProductList from "../components/ProductList";
 import Location from "../components/Location";
 
