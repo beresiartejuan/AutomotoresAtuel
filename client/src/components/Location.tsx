@@ -7,17 +7,19 @@ const Container = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:#d3d3d3;
     gap: 2rem;
 
     h3 {
         font-size: 2rem;
         font-weight: 500;
+        text-decoration: underline;
     }
 
     iframe {
         width: 70vw;
         height: 50vh;
+        border: none;
+        box-shadow: #000 0px 0px 5px;
     }
 `;
 
