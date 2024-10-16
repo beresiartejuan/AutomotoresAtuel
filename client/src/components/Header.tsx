@@ -11,6 +11,10 @@ const Container = styled.header`
     justify-content: center;
     padding: 0 0 0 15vw;
     gap: 1rem;
+
+    @media screen and (max-width: 750px) {
+        padding: 0 5vw;
+    }
 `;
 
 const Text = styled.span`
@@ -19,6 +23,10 @@ const Text = styled.span`
     font-size: 2.4rem;
     color: #e4e4e4;
     text-shadow: 2px 2px 2px #ffffff8d;
+
+    @media screen and (max-width: 750px) {
+        font-size: 2rem;
+    }
 `;
 
 const Button = styled.button`
@@ -34,6 +42,10 @@ const Button = styled.button`
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     border: 1px #fff solid;
     border-radius: 12px;
+
+    @media screen and (max-width: 750px) {
+        font-size: 1rem;
+    }
 
     &:hover {
         background-color: rgba(255,255,255,.2);
