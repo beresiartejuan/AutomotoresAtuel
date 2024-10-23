@@ -1,15 +1,16 @@
 import Header from "../components/Header";
 import Navbar from "../islands/Navbar";
-import ProductList from "../components/ProductList";
 import Location from "../components/Location";
+import Products from "../islands/Products";
 
 export default function Index() {
     return (
         <>
             <Navbar></Navbar>
             <Header></Header>
-            <ProductList></ProductList>
-            <Location></Location>
+            <Products id="autos"></Products>
+            <Location id="location"></Location>
+
         </>
     )
 }

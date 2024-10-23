@@ -18,6 +18,12 @@
         height: 5.5rem;
     }
 
+    button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
     div {
         /* - Flex - */
         display: flex;

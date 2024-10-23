@@ -1,4 +1,7 @@
 import styled from "styled-components"
+import { getAllProducts } from "../mooks/products";
+import ProductCard from "./ProductCard";
+import SelectedButton from "./SelectedButton";
 
 const Container = styled.section`
     margin: 7vh 0;
@@ -34,15 +37,13 @@ const Filters = styled.div`
     }
 `;
 
-const Results = styled.div``;
-
-const SelectedButton = styled.button<{ $selected: boolean }>`
-    padding: .8rem 2rem;
-    background-color: #353535;
-    color: #e4e0e0;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    border: transparent 0px;
+const Results = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 5vh;
+    padding: 0 7vw;
 `;
 
 export default function ProductList() {
@@ -50,8 +51,8 @@ export default function ProductList() {
         <Container>
             <h3>Encontra el auto perfecto para vos</h3>
             <Filters>
-                <SelectedButton $selected={true}>0 Km</SelectedButton>
-                <SelectedButton $selected={false}>Usados</SelectedButton>
+                <SelectedButton $isSelected={true}>0 Km</SelectedButton>
+                <SelectedButton $isSelected={false}>Usados</SelectedButton>
                 <input type="text" name="" id="" placeholder="Escribí marca o modelo del auto..." />
                 <button className="search">
                     <svg width={20} height={20} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -59,7 +60,9 @@ export default function ProductList() {
                     </svg>
                 </button>
             </Filters>
-            <Results></Results>
+            <Results>
+                {getAllProducts().map(product => <ProductCard key={product.id} info={product} />)}
+            </Results>
         </Container>
     )
 }
